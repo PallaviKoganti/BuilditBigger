@@ -44,15 +44,16 @@ public class MainActivity extends ActionBarActivity {
     }
 
     public void tellJoke(View view){
-        Joker joker = new Joker();
+        /*Joker joker = new Joker();
 
         // Create Intent to launch JokeFactory Activity
         Intent intent = new Intent(this, JokeActivity.class);
         // Put the string in the envelope
         intent.putExtra(getString(R.string.hello_world), joker.getJoke());
-        startActivity(intent);
+        startActivity(intent);*/
 
         //Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
+        new EndpointsAsyncTask().execute(this);
     }
 
 
