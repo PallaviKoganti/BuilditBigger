@@ -17,23 +17,25 @@ import java.io.IOException;
  * Created by pallavi on 12/22/2016.
  */
 
-public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
+public class EndpointsAsyncTask extends AsyncTask<MainActivityFragment, Void, String> {
 
     private static MyApi myApiService = null;
     private OnJokeReceivedListener listener;
     private Context context;
+    private MainActivityFragment mainActivityFragment;
 
     @Override
-    protected String doInBackground(Context... params) {
+    protected String doInBackground(MainActivityFragment... params) {
         if(myApiService == null) {  // Only do this once
             MyApi.Builder builder = new MyApi.Builder(AndroidHttp.newCompatibleTransport(), new AndroidJsonFactory(), null)
-                    .setRootUrl("http://10.0.2.2:8080/_ah/api/");
-            //.setRootUrl("http://builditbigger-152917.appspot.com/_ah/api/");
+                    //.setRootUrl("http://10.0.2.2:8080/_ah/api/");
+            .setRootUrl("https://builditbigger-152917.appspot.com/_ah/api/");
 
             myApiService = builder.build();
         }
 
-        context = params[0];
+        mainActivityFragment = params[0];
+        context = mainActivityFragment.getActivity();
 
 
         try {
@@ -50,6 +52,7 @@ public class EndpointsAsyncTask extends AsyncTask<Context, Void, String> {
         // Put the string in the envelope
         intent.putExtra(JokeActivity.JOKE_KEY,result);
         context.startActivity(intent);*/
+        mainActivityFragment.loadedJoke = result;
         Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }
 }

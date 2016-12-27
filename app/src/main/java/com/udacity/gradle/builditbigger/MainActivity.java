@@ -53,7 +53,7 @@ public class MainActivity extends ActionBarActivity {
         startActivity(intent);*/
 
         //Toast.makeText(this, joker.getJoke(), Toast.LENGTH_SHORT).show();
-        new EndpointsAsyncTask().execute(this);
+        //new EndpointsAsyncTask().execute(this);
     }
 
 
