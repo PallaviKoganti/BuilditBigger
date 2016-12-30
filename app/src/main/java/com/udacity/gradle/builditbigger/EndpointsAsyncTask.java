@@ -1,14 +1,13 @@
 package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
-import android.content.Intent;
 import android.os.AsyncTask;
 import android.widget.Toast;
 
 import com.example.pallavi.myapplication.backend.myApi.MyApi;
 import com.google.api.client.extensions.android.http.AndroidHttp;
 import com.google.api.client.extensions.android.json.AndroidJsonFactory;
-import com.udacity.gradle.jokedisplay.JokeActivity;
+//import com.udacity.gradle.builditbigger.free.MainActivityFragment;
 
 import java.io.IOException;
 

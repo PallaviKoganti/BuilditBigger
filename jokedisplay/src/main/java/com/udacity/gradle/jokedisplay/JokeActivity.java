@@ -27,5 +27,6 @@ public class JokeActivity extends AppCompatActivity {
         } else {
             textview.setText("Where is the joke!!!");
         }
+
     }
 }
