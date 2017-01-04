@@ -5,9 +5,9 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     tools:context="com.udacity.gradle.builditbigger.MainActivityFragment">
 
-    <!-- TODO: Update blank fragment layout -->
+    <!-- TODO: Update blank fragment layout
     <TextView android:layout_width="match_parent" android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:text="@string/hello_blank_fragment" /> -->
 
     <TextView android:text="@string/instructions"
         android:layout_width="wrap_content"
@@ -24,12 +24,6 @@
         android:onClick="tellJoke"
 
         />
-
-    <ProgressBar
-        android:id="@+id/joke_progressbar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"/>
     
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -40,4 +34,11 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id">
     </com.google.android.gms.ads.AdView>
+
+    <ProgressBar
+        android:id="@+id/joke_progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+
 </RelativeLayout>
